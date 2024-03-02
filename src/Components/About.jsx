@@ -1,15 +1,18 @@
 import React from "react";
 import Project from "./Project";
 import Images from "../utils/constants";
+import Footerb from "./Footerb";
 
 const About = () => {
   return (
+    <div className="about-page">
     <div
       style={{
-        maxWidth: "700px",
+        maxWidth: "100%",
         marginLeft: "auto",
         marginRight: "auto",
-        marginTop: "500px",
+        display: "flex",
+        flexDirection:"column",
       }}
     >
       <div
@@ -25,16 +28,19 @@ const About = () => {
             fontSize: "200px",
             margin: "100px",
             marginTop: "520px",
-            marginLeft: "auto",
-            zIndex: "2",
+            marginLeft: "350px",
             position: "relative",
           }}
         >
           Hello
         </h1>
+        
         <img src={Images.Profile2} alt="profile" className="pimg" />
+        
       </div>
-      <div>
+
+      <div style={{display: "flex", margin: "50px"}}>
+        <div style={{width: "70%"}}></div>
         <p
           style={{
             marginTop: "-100px",
@@ -42,7 +48,6 @@ const About = () => {
             fontSize: "25px",
             lineHeight: "40px",
             color: "white",
-            zIndex: "3",
             textAlign: "justify",
             position: "relative",
           }}
@@ -60,7 +65,37 @@ const About = () => {
           that, I enjoy some deep sci-fi movies (Interstellar is my all-time
           favorite), good music, and some quality time with my family.
         </p>
+        <div style={{width: "70%"}}></div>
       </div>
+      <div style={{display: "flex", flexDirection: "column"}}>
+        <div>
+          <h2 style={{fontSize: "240px", color: "black", textAlign: "center" }}>Experience</h2>
+        </div>
+        <div>
+          <div className="experience">
+          <p className="company-head">WIPRO <span>Project Engineer</span></p>
+          <p className="exp-body"></p>
+          <p className="expyears">2021 - 2022</p>
+          </div>
+          <div className="experience">
+          <p className="company-head">RUBODEX HERBAL PRIVATE LIMITED <span>Web Developer</span></p>
+          <p className="exp-body"></p>
+          <p className="expyears">2020 - 2020</p>
+          </div>
+          <div className="experience">
+          <p className="company-head">UNIVERSITY OF CALGARY <span>Teaching Assistant</span></p>
+          <p className="exp-body"></p>
+          <p className="expyears">2024 - Present</p>
+          </div>
+          <div className="experience">
+          <p className="company-head">UCalgary Blockchain Society <span>Developer</span></p>
+          <p className="exp-body"></p>
+          <p className="expyears">2024-Present</p>
+          </div>
+          </div> 
+        </div>
+    </div>
+    <Footerb/>
     </div>
   );
 };

@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Route,
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
+  NavLink,
   Link,
   Outlet,
+  useLocation
 } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Work from "./Components/Work";
-import Navbar from "./Components/Navbar";
+
 
 const App = () => {
   const router = createBrowserRouter(
@@ -35,55 +37,83 @@ const App = () => {
 const Root = () => {
   return (
     <>
-      <div
-        className="navbar"
-        style={{
-          display: "flex",
-          direction: "row",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <div style={{ margin: "30px 50px 50px 70px" }}>
-          <Link
-            style={{
-              fontSize: "30px",
-              letterSpacing: "0px",
-              fontWeight: "bold",
-              textDecoration: "none",
-              color: "black",
-            }}
-            to="/"
-          >
-            {" "}
-            Shivam Gupta{" "}
-          </Link>
-        </div>
-        <div
-          style={{
-            margin: "30px 90px 50px 50px",
-            display: "flex",
-            direction: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <Link className="nav-el" to="/Work">
-            Work
-          </Link>
-          <Link className="nav-el" to="/About">
-            About
-          </Link>
-          <Link className="nav-el" to="/Contact">
-            Contact
-          </Link>
-        </div>
-      </div>
-
+      <NavBar />
       <div>
         <Outlet />
       </div>
     </>
+  );
+};
+
+const NavBar = () => {
+  const location = useLocation();
+  const isAboutPage = location.pathname === '/About'; // Check if current page is About
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+
+  return (
+
+ <nav style={{background: isAboutPage ? "#111111" : "white"}}>
+        <Link
+          style={{
+            margin: "30px",
+            fontSize: "30px",
+            letterSpacing: "0px",
+            fontWeight: "bold",
+            textDecoration: "none",
+            color: isAboutPage ? "white" : "black",
+           // Change text color to white on About page
+          }}
+          to="/"
+        >
+          {" "}
+          Shivam Gupta{" "}
+        </Link>
+
+      <div
+        style={{margin: "30px"
+        }}
+        className="menu"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span style={{background: isAboutPage ? "white" : "black"}}></span>
+        <span style={{background: isAboutPage ? "white" : "black"}}></span>
+        <span style={{background: isAboutPage ? "white" : "black"}}></span>
+      </div>
+        <ul className={menuOpen ? "open" : ""} style={{background: isAboutPage ? "#111111": "white"}}>
+        
+        <li>
+        <NavLink
+          className="nav-el"
+          to="/Work"
+          style={{ color: isAboutPage ? "white" : "black"}} // Change text color to white on About page
+        >
+          Work
+        </NavLink>
+        </li>
+        <li>
+        <NavLink
+          className={isAboutPage ? "nav-el about" : "nav-el"} // Apply different class for About page
+          to="/About"
+          style={{ color: isAboutPage ? "white" : "black" }} // Change text color to white on About page
+        >
+          About
+        </NavLink>
+        </li>
+        <li>
+        <NavLink
+          className="nav-el"
+          to="/Contact"
+          style={{ color: isAboutPage ? "white" : "black" }} // Change text color to white on About page
+        >
+          Contact
+        </NavLink>
+        </li>
+        
+        </ul>
+      </nav>
+    
   );
 };
 

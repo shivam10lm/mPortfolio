@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 
 const Form = () => {
+  const initialFormData = {
+    name: "",
+    email: "",
+    message: "",
+  };
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,8 +20,10 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can process the form data here
     console.log(formData);
+    setFormData(initialFormData);
+    alert('Email successfully sent');
+    
   };
 
   return (

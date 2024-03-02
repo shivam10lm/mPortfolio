@@ -1,26 +1,19 @@
 import React from "react";
 
-const Project = ({ head1, head2, head3, imageSource, bgcolor, clr }) => {
+const Project = ({ head1, head2, head3, imageSource, bgcolor, clr, link, bp, bs, elm }) => {
   return (
     <div>
-      <div
-        className="sec-about"
-        style={{
-          marginTop: "120px",
-          height: "100%",
-          width: "100%",
-          position: "relative",
-        }}
-      >
+      <div className="sec-about">
         <a
-          href="/"
-          className="about-me"
+          href={link}
+          target="_blank"
+          className={elm}
           style={{
             backgroundImage: `url(${imageSource})`,
             backgroundColor: `${bgcolor}`,
           }}
         >
-          <h2 style={{ color: `${clr}` }}>
+          <h2 style={{ color: `${clr}`, backgroundPosition: `${bp}`, backgroundSize: `${bs}` }}>
             {head1} <br />
             {head2}
           </h2>
