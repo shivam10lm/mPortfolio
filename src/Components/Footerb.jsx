@@ -23,6 +23,7 @@ const Footerb = () => {
           </a>
         </div>
       </div>
+      <p className="copyright2" style={{color:"white", margin: "40px"}}>© 2024 Shivam Gupta</p>
     </div>
   );
 };

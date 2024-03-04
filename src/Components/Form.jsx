@@ -27,7 +27,7 @@ const Form = () => {
   };
 
   return (
-    <div style={{ width: "50%" }}>
+    <div className="main-form">
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">What is your name?</label>

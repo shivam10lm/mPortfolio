@@ -2,8 +2,6 @@ import React from "react";
 import Project from "./Project";
 import Images from "../utils/constants";
 import Footer from "./Footer";
-import Mnavbar from "./Mnavbar";
-
 const Home = () => {
   return (
     <div className="main">

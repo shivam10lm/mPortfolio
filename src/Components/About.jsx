@@ -5,7 +5,7 @@ import Footerb from "./Footerb";
 
 const About = () => {
   return (
-    <div className="about-page">
+    <div className="about-page" style={{maxWidth: "100%", overflow: "hidden"}}>
     <div
       style={{
         maxWidth: "100%",
@@ -16,21 +16,10 @@ const About = () => {
       }}
     >
       <div
-        style={{
-          height: "100%",
-          width: "100%",
-          marginTop: "30px",
-        }}
+        className="head-div"
       >
         <h1
-          style={{
-            color: "white",
-            fontSize: "200px",
-            margin: "100px",
-            marginTop: "520px",
-            marginLeft: "350px",
-            position: "relative",
-          }}
+          className="heading-hello"
         >
           Hello
         </h1>
@@ -40,18 +29,8 @@ const About = () => {
       </div>
 
       <div style={{display: "flex", margin: "50px"}}>
-        <div style={{width: "70%"}}></div>
-        <p
-          style={{
-            marginTop: "-100px",
-            marginBottom: "0",
-            fontSize: "25px",
-            lineHeight: "40px",
-            color: "white",
-            textAlign: "justify",
-            position: "relative",
-          }}
-        >
+        <div className="hidep"></div>
+        <p className="para-about">
           My name is Semih, and I'm a digital designer from the Netherlands. I
           am currently at IKEA working in the design system team as a Senior
           Designer. <br />
@@ -65,11 +44,11 @@ const About = () => {
           that, I enjoy some deep sci-fi movies (Interstellar is my all-time
           favorite), good music, and some quality time with my family.
         </p>
-        <div style={{width: "70%"}}></div>
+        <div className="hidep"></div>
       </div>
-      <div style={{display: "flex", flexDirection: "column"}}>
+      <div className="main-exp">
         <div>
-          <h2 style={{fontSize: "240px", color: "black", textAlign: "center" }}>Experience</h2>
+          <h2 className="exp-head">Experience</h2>
         </div>
         <div>
           <div className="experience">

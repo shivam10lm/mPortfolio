@@ -24,7 +24,9 @@ const Footer = () => {
           </a>
           
         </div>
+        
       </div>
+      <p className="copyright2" style={{margin: "40px"}}>© 2024 Shivam Gupta</p>
     </div>
   );
 };

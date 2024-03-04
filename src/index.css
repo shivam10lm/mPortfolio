@@ -255,6 +255,7 @@ line-height: 30px;
 margin-bottom: 15px;
 color: white;
 }
+
 span{
   color: #888;
 }
@@ -263,6 +264,7 @@ span{
 font-size: 18px;
 color: #888;
 }
+
 nav {
   display: flex;
   flex-direction: row;
@@ -329,9 +331,132 @@ ul li a {
 .heading2 h3{
   font-size: 40px;
 }
+.heading-hello{
+  color: white;
+  font-size: 200px;
+  margin: 100px;
+  margin-top: 520px;
+  margin-left: 350px;
+  position: relative;
+  z-index: 3;
+}
+.para-about{
+  margin-top: -100px;
+  margin-bottom: 0;
+  font-size: 25px;
+  line-height: 40px;
+  color: white;
+  text-align: justify;
+  position: relative;
+}
+.head-div{
+  height: 100%;
+  width: 100%;
+  margin-top: 30px;
 
+}
+.hidep{
+  width: 70%;
+}
+.main-exp{
+  display: flex;
+  flex-direction: column;
+}
+.exp-head{
+  font-size: 240px;
+  color: black;
+  text-align: center;
+
+}
+.copyright2{
+  display: none;
+}
+
+.section-header{
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: justify;
+  width: 90%;
+  padding-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-form{
+  width: 50%;
+}
 
 @media only screen and (max-width: 480px) {
+.submit{
+  width: 100%;
+  justify-content: center;
+}
+.main-form{
+  width: 80%;
+}
+.main-exp{
+  justify-content: left;
+  margin: 7%;
+}
+.copyright{
+  display: none;
+}
+.copyright2{
+  display: flex;
+}
+.exp-head{
+  font-size: 78px;
+  text-align: left;
+}
+
+.experience{
+  margin: 3.5%;
+}
+
+.heading-hello{
+  font-size: 100px;
+  margin-bottom: -470px;
+  margin-left: 47px;
+}
+
+.company-head{
+  font-size: 21px;
+}
+
+.expyears{
+  font-size: 15px;
+}
+
+.hidep{
+  width: 0;
+}
+.pimg{
+  height: 550px;
+  margin-left: 0;
+  margin-top: 0;
+}
+.head-div{
+  margin-top: 0px;
+}
+.para-about{
+  font-size: 18px;
+  line-height: 30px;
+}
  nav .menu {
     display: flex;
 }
@@ -432,6 +557,7 @@ h3{
 .footer{
   flex-direction: column;
   padding: 50px 40px;
+  align-items: normal;
 }
 .footer-left{
 

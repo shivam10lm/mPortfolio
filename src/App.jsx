@@ -50,11 +50,11 @@ const NavBar = () => {
   const isAboutPage = location.pathname === '/About'; // Check if current page is About
 
   const [menuOpen, setMenuOpen] = useState(false);
-
+  
 
   return (
 
- <nav style={{background: isAboutPage ? "#111111" : "white"}}>
+ <nav style={{background: isAboutPage ? "#111111" : "white", zIndex: "4"}}>
         <Link
           style={{
             margin: "30px",
@@ -66,6 +66,7 @@ const NavBar = () => {
            // Change text color to white on About page
           }}
           to="/"
+          onClick={() => setMenuOpen(false)}
         >
           {" "}
           Shivam Gupta{" "}
@@ -88,6 +89,7 @@ const NavBar = () => {
           className="nav-el"
           to="/Work"
           style={{ color: isAboutPage ? "white" : "black"}} // Change text color to white on About page
+          onClick={() => setMenuOpen(false)}
         >
           Work
         </NavLink>
@@ -97,6 +99,7 @@ const NavBar = () => {
           className={isAboutPage ? "nav-el about" : "nav-el"} // Apply different class for About page
           to="/About"
           style={{ color: isAboutPage ? "white" : "black" }} // Change text color to white on About page
+          onClick={() => setMenuOpen(false)}
         >
           About
         </NavLink>
@@ -106,6 +109,7 @@ const NavBar = () => {
           className="nav-el"
           to="/Contact"
           style={{ color: isAboutPage ? "white" : "black" }} // Change text color to white on About page
+          onClick={() => setMenuOpen(false)}
         >
           Contact
         </NavLink>

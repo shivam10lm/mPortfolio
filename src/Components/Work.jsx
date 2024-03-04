@@ -32,8 +32,8 @@ const Work = () => {
 
         <Project
           link = "https://csb-851kug.netlify.app/"
-          head1="Your Tube, Your World "
-          head2="Explore and Share"
+          head1="Your Tube,"
+          head2="Your World"
           head3="YouTube Clone"
           imageSource={Images.App1}
           bgcolor={"#FFDBE1"}
